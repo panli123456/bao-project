@@ -26,5 +26,8 @@ spring:
     url: "jdbc:mysql://192.168.213.129:3308/test"
     username: root
     password: root
+  redis:
+    host: 192.168.213.129
+    port: 6379
 
 

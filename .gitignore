@@ -1,6 +1,11 @@
 # Project exclude paths
 /consumer/target/
 /user/target/
+/common/target/
 #
 .idea
 /.idea/
+*.iml
+*.iws
+*.ipr
+*.lst
