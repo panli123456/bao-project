@@ -29,5 +29,8 @@ spring:
   redis:
     host: 192.168.213.129
     port: 6379
+    database: 1
+
+
 
 
