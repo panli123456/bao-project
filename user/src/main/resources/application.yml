@@ -23,18 +23,17 @@ spring:
     name: user
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: "jdbc:mysql://192.168.213.129:3308/test"
+    url: "jdbc:mysql://192.168.213.131:3308/test"
     username: root
     password: root
   redis:
-    host: 192.168.213.129
+    host: 192.168.213.131
     port: 6379
     database: 1
   cloud:
     nacos:
       discovery:
-        server-addr: http://192.168.213.130:28999
-
+        server-addr: 192.168.213.130:28999
 
 
 

@@ -1,0 +1,10 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.213.130:28999
+        enabled: true
