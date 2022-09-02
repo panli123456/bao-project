@@ -30,6 +30,10 @@ spring:
     host: 192.168.213.129
     port: 6379
     database: 1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://192.168.213.130:28999
 
 
 

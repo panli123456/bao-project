@@ -3,6 +3,7 @@ package com.lp.bao.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.lp.bao.dao.UserMapper;
 import com.lp.bao.entity.User;
+import com.lp.bao.entity.UserTypeEnum;
 import com.lp.bao.service.UserService;
 import com.lp.bao.utill.RedisUtils;
 import org.redisson.api.RBucket;
@@ -28,6 +29,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int saveEntity() {
+        System.out.println(UserTypeEnum.USER_1.getName());
         User user1 = new User();
         user1.setName("james");
         int insert = userMapper.insert(user1);

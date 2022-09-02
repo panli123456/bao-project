@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
     </parent>
     <groupId>org.lp</groupId>
     <artifactId>bao-project</artifactId>
@@ -16,6 +16,7 @@
         <module>user</module>
         <module>consumer</module>
         <module>common</module>
+        <module>gateWay</module>
     </modules>
 
     <properties>
@@ -42,6 +43,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
                 <version>2.7.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
 
