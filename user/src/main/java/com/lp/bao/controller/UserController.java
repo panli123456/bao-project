@@ -1,5 +1,6 @@
 package com.lp.bao.controller;
 
+import com.lp.bao.feign.ConsumerService;
 import com.lp.bao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,13 +34,17 @@ public class UserController {
     @Resource
     UserService userService;
 
+    @Resource
+    ConsumerService consumerService;
+
     @GetMapping("/user/{param}")
     public String test(@PathVariable("param") String param) {
-        //使用 LoadBalanceClient 和 RestTemolate 结合的方式来访问
+       /* //使用 LoadBalanceClient 和 RestTemolate 结合的方式来访问
         ServiceInstance serviceInstance = loadBalancerClient.choose("consumer");
         String url = String.format("http://%s:%s/consumer/%s",serviceInstance.getHost(),serviceInstance.getPort(),appName + ":" +param);
         System.out.println("request url:"+url);
-        return restTemplate.getForObject(url,String.class);
+        return restTemplate.getForObject(url,String.class);*/
+        return consumerService.test(param);
     }
 
     @GetMapping("/user/save")

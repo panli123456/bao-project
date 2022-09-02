@@ -14,6 +14,7 @@ public class TestController {
 
     @GetMapping("consumer/{value}")
     public String test(@PathVariable("value") String value) {
+        System.out.println("===========================>");
         return value;
     }
 
