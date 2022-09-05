@@ -9,6 +9,7 @@ import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,6 +17,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RefreshScope
+@RequestMapping("api/user")
 public class UserController {
     @Autowired
     private LoadBalancerClient loadBalancerClient;
@@ -37,7 +39,7 @@ public class UserController {
     @Resource
     ConsumerService consumerService;
 
-    @GetMapping("/user/{param}")
+    @GetMapping("/{param}")
     public String test(@PathVariable("param") String param) {
        /* //使用 LoadBalanceClient 和 RestTemolate 结合的方式来访问
         ServiceInstance serviceInstance = loadBalancerClient.choose("consumer");
@@ -47,12 +49,12 @@ public class UserController {
         return consumerService.test(param);
     }
 
-    @GetMapping("/user/save")
+    @GetMapping("/save")
     public int save() {
         return userService.saveEntity();
     }
 
-    @GetMapping("/user/config")
+    @GetMapping("/config")
     public String config() {
 
         return username + ":" + password;

@@ -1,7 +1,5 @@
 # Project exclude paths
-/consumer/target/
-/user/target/
-/common/target/
+**/target/
 #
 .idea
 /.idea/
