@@ -23,11 +23,11 @@ spring:
     name: user
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: "jdbc:mysql://192.168.213.132:3308/test"
+    url: "jdbc:mysql://192.168.213.133:3308/test"
     username: root
     password: root
   redis:
-    host: 192.168.213.132
+    host: 192.168.213.133
     port: 6379
     database: 1
   cloud:
